@@ -35,7 +35,7 @@ with st.form("data"):
     if submitted:
         
         gsc = pd.read_csv(gsc)
-        gsc['Date'] = gsc['Date'] = gsc['Date'].astype('datetime64[ns]')
+        gsc['Date'] = gsc['Date'].astype('datetime64[ns]')
         gsc['Date'] = gsc["Date"].dt.strftime('%-m/%d/%Y')
         gsc = gsc.sort_values('Date',ascending=True)
 
