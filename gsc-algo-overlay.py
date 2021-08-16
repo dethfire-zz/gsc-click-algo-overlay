@@ -62,11 +62,9 @@ with st.form("data"):
         ####### PLOT DATA
         st.title("Graph Output")
         st.write("Hover to zoom. Top right icon.")
-        if metric == 'Impressions':
-            plt.rcParams['axes.formatter.useoffset'] = False
         xs = gsc['Date']
         xss = google_dates
-        ys = gsc[metric]
+        ys = gsc[metric] * 10
         figure(figsize=(20, 6), dpi=80)
         plt.plot(xs,ys,'k-')
         plt.gcf().autofmt_xdate()
