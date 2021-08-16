@@ -40,7 +40,7 @@ with st.form("data"):
         gsc['Date'] = gsc["Date"].dt.strftime('%-m/%d/%Y')
         
         if metric == 'CTR':
-            gsc['CTR'] = gsc['CTR'][:-1]
+            gsc['CTR'] = gsc['CTR'].replace('%','')
         
         gsc = gsc.sort_values('Date',ascending=True)
 
