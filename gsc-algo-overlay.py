@@ -102,4 +102,4 @@ with st.form("data"):
           index = google_dates.index(x)
           st.write(x + " " + algo_notes[index] +" "+ title[index])
 
-st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [Rocket Clicks](https://www.rocketclicks.com) and [Physics Forums](https://www.physicsforums.com)')
+st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [importSEM](https://importsem.com) and [Physics Forums](https://www.physicsforums.com)')
