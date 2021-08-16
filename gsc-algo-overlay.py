@@ -69,7 +69,7 @@ with st.form("data"):
         figure(figsize=(20, 6), dpi=80)
         plt.plot(xs,ys,'k-')
         plt.gcf().autofmt_xdate()
-        plt.ticklabel_format(useOffset=False)
+        plt.ticklabel_format(useOffset=False, axis='y')
         
         algo_list = []
         for x,y in zip(xs,ys):
