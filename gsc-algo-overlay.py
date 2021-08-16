@@ -30,6 +30,7 @@ st.markdown("""
 
 with st.form("data"):
     gsc = st.file_uploader("Upload your GSC Date Performance CSV",type=['csv'])
+    metric = st.selectbox("Select GSC Metric", ('Clicks','Impressions','CTR','Positions'))
     submitted = st.form_submit_button("Process")
     
     if submitted:
@@ -57,7 +58,7 @@ with st.form("data"):
         st.title("Graph Output")
         xs = gsc['Date']
         xss = google_dates
-        ys = gsc['Clicks']
+        ys = gsc[metric]
         figure(figsize=(20, 6), dpi=80)
         plt.plot(xs,ys,'k-')
         plt.gcf().autofmt_xdate()
@@ -72,8 +73,8 @@ with st.form("data"):
             plt.axvline(x=x, color="lightgray", linestyle="--")
             plt.plot(x,y,'ro')
             plt.xlabel("Dates")
-            plt.ylabel("Clicks")
-            plt.title("GSC Clicks Time Series with Algo Overlay")
+            plt.ylabel(metric)
+            plt.title("GSC "+metric+" Time Series with Algo Overlay")
             plt.annotate(label, 
                          (x,y),
                          color='white', 
