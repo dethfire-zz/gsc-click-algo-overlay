@@ -30,7 +30,7 @@ st.markdown("""
 
 with st.form("data"):
     gsc = st.file_uploader("Upload your GSC Date Performance CSV",type=['csv'])
-    metric = st.selectbox("Select GSC Metric", ('Clicks','Impressions','CTR','Positions'))
+    metric = st.selectbox("Select GSC Metric", ('Clicks','Impressions','CTR','Position'))
     submitted = st.form_submit_button("Process")
     
     if submitted:
