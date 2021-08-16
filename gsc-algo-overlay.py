@@ -62,6 +62,8 @@ with st.form("data"):
         ####### PLOT DATA
         st.title("Graph Output")
         st.write("Hover to zoom. Top right icon.")
+        if metric == 'Impressions':
+            matplotlib.rcParams['axes.formatter.useoffset'] = False
         xs = gsc['Date']
         xss = google_dates
         ys = gsc[metric]
