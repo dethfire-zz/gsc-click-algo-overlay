@@ -64,7 +64,8 @@ with st.form("data"):
         st.write("Hover to zoom. Top right icon.")
         xs = gsc['Date']
         xss = google_dates
-        ys = gsc[metric] * 10
+        ys = gsc[metric]
+        plt.ticklabel_format(useOffset=False)
         figure(figsize=(20, 6), dpi=80)
         plt.plot(xs,ys,'k-')
         plt.gcf().autofmt_xdate()
