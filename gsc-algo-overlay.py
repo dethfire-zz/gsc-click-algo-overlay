@@ -1,4 +1,4 @@
-import streamlit as st
+timport streamlit as st
 import json
 import requests
 import pandas as pd
@@ -89,7 +89,7 @@ with st.form("data"):
         st.pyplot()
 
         ##### PRINT ALGO LEGEND
-        st.title("Relevant Algo Legend")
+        st.title("Detected Algo Updates")
         for x in algo_list:
           index = google_dates.index(x)
           st.write(x + " " + algo_notes[index] +" "+ title[index])
