@@ -38,9 +38,10 @@ with st.form("data"):
         gsc = pd.read_csv(gsc)
         gsc['Date'] = gsc['Date'].astype('datetime64[ns]')
         gsc['Date'] = gsc["Date"].dt.strftime('%-m/%d/%Y')
+        st.write(metric)
         
         if metric == 'CTR':
-            gsc['CTR'] = gsc['CTR'].replace('%','')
+            gsc['CTR'] = round(gsc['CTR'].replace('%','').astype('float'))
         
         gsc = gsc.sort_values('Date',ascending=True)
 
