@@ -38,6 +38,10 @@ with st.form("data"):
         gsc = pd.read_csv(gsc)
         gsc['Date'] = gsc['Date'].astype('datetime64[ns]')
         gsc['Date'] = gsc["Date"].dt.strftime('%-m/%d/%Y')
+        
+        if metric == 'CTR':
+            gsc['CTR'] = gsc['CTR'][:-1]
+        
         gsc = gsc.sort_values('Date',ascending=True)
 
         ###### GET ALTO API
@@ -56,6 +60,7 @@ with st.form("data"):
 
         ####### PLOT DATA
         st.title("Graph Output")
+        st.write("Hover to zoom")
         xs = gsc['Date']
         xss = google_dates
         ys = gsc[metric]
