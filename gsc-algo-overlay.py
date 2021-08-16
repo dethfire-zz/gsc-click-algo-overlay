@@ -41,7 +41,7 @@ with st.form("data"):
         st.write(metric)
         
         if metric == 'CTR':
-            gsc['CTR'] = round(gsc['CTR'].replace('%','').astype('float'))
+            gsc['CTR'] = round(gsc['CTR'].str.replace('%','').astype('float'))
         
         gsc = gsc.sort_values('Date',ascending=True)
 
