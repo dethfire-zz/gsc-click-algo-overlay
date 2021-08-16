@@ -20,7 +20,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<p class="big-font">GSC Clicks with Google Algo Overlay</p>
+<p class="big-font">GSC with Google Algo Overlay</p>
 <p>Graph your GSC clicks data with a Google Algo overlay</p>
 <p>Inspiration from: <a href="https://ipullrank.com">iPullRank</a>'s <a href="https://github.com/csliva/SEOgre/blob/main/main.py">Colt Silva</a></p>
 <b>Directions: </b></ br><ol>
