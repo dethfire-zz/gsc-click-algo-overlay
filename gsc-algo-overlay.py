@@ -65,11 +65,12 @@ with st.form("data"):
         xs = gsc['Date']
         xss = google_dates
         ys = gsc[metric]
-        plt.ticklabel_format(useOffset=False)
+        
         figure(figsize=(20, 6), dpi=80)
         plt.plot(xs,ys,'k-')
         plt.gcf().autofmt_xdate()
-
+        plt.ticklabel_format(useOffset=False)
+        
         algo_list = []
         for x,y in zip(xs,ys):
 
