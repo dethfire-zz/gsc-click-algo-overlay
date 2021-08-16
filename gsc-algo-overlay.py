@@ -41,7 +41,7 @@ with st.form("data"):
         st.write(metric)
         
         if metric == 'CTR':
-            gsc['CTR'] = round(gsc['CTR'].str.replace('%','').astype('float'))
+            gsc['CTR'] = gsc['CTR'].str.replace('%','').astype('float')
         
         gsc = gsc.sort_values('Date',ascending=True)
 
@@ -61,7 +61,7 @@ with st.form("data"):
 
         ####### PLOT DATA
         st.title("Graph Output")
-        st.write("Hover to zoom")
+        st.write("Hover to zoom. Top right icon.")
         xs = gsc['Date']
         xss = google_dates
         ys = gsc[metric]
