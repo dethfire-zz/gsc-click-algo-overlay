@@ -22,7 +22,7 @@ st.markdown("""
 st.markdown("""
 <p class="big-font">GSC with Google Algo Overlay</p>
 <p>Graph your GSC clicks data with a Google Algo overlay</p>
-<p>Inspiration from: <a href="https://ipullrank.com">iPullRank</a>'s <a href="https://github.com/csliva/SEOgre/blob/main/main.py">Colt Silva</a></p>
+<p>Inspiration from: <a href="https://ipullrank.com">iPullRank</a>'s <a href="https://github.com/csliva/SEOgre/blob/main/main.py">Colt Silva's</a> <a href="https://ipullrank.com/layered-seo-analysis-for-happy-clients">data layering guide</a></p>
 <b>Directions: </b></ br><ol>
 <li>Upload GSC performance date CSV</li>
 </ol>
