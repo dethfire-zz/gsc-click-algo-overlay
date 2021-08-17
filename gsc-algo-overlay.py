@@ -24,7 +24,7 @@ st.markdown("""
 <p>Graph your GSC clicks data with a Google Algo overlay</p>
 <p>Inspiration from: <a href="https://ipullrank.com">iPullRank's</a> <a href="https://twitter.com/SignorColt">Colt Silva's</a> <a href="https://ipullrank.com/layered-seo-analysis-for-happy-clients">data layering guide</a></p>
 <b>Directions: </b></ br><ol>
-<li>Upload GSC performance date CSV. Dates.csv from the performance export zip.</li>
+<li>Upload GSC performance date CSV. Dates.csv from the performance export zip file.</li>
 </ol>
 """, unsafe_allow_html=True)
 
